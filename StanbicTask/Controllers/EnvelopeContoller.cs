@@ -10,7 +10,7 @@ namespace StanbicTask.Controllers
     public class EnvelopeContoller : ControllerBase
     {
         
-        [HttpPost("post.{format}"), FormatFilter]
+        [HttpPost("postevelopes.{format}"), FormatFilter]
         public IActionResult Post([FromBody] Envelope request)
         {
             
@@ -22,7 +22,7 @@ namespace StanbicTask.Controllers
             return BadRequest("Pass in a valid xml payload!");
         }
 
-        [HttpGet("get.{format}"),FormatFilter]
+        [HttpGet("getenvelopes.{format}"),FormatFilter]
 
         public IActionResult Get()
         {
